@@ -1,6 +1,26 @@
 import ScrollReveal from "../components/ScrollReveal"
+import { motion } from "framer-motion";
+
+const skillsLogos = [
+    { src: "src/assets/logo/django_logo.png", alt: "django" },
+    { src: "src/assets/logo/express_logo.png", alt: "express" },
+    { src: "src/assets/logo/nodejs_logo.png", alt: "node" },
+    { src: "src/assets/logo/react_logo.png", alt: "react" },
+    { src: "src/assets/logo/psql_logo.png", alt: "postgresql" },
+    { src: "src/assets/logo/mongo_db_logo.png", alt: "mongodb" },
+    { src: "src/assets/logo/msql_logo.png", alt: "mssql" },
+    { src: "src/assets/logo/redis_log.png", alt: "redis" },
+    { src: "src/assets/logo/docker_logo.png", alt: "docker" },
+    { src: "src/assets/logo/nginx_logo.png", alt: "nginx" },
+    { src: "src/assets/logo/firebase_logo.png", alt: "firebase" },
+    { src: "src/assets/logo/postman_loog.png", alt: "postman" },
+    { src: "src/assets/logo/github_logo_2.png", alt: "github" },
+    { src: "src/assets/logo/numpy_logo.png", alt: "numpy" },
+    { src: "src/assets/logo/pandas_logo.png", alt: "pandas" },
+];
 
 export default function Home() {
+    const duplicatedLogos = [...skillsLogos, ...skillsLogos, ...skillsLogos];
     return (
         <>
 
@@ -40,26 +60,28 @@ export default function Home() {
                     </div>
 
                     {/* Image Section */}
-                    <div className="flex items-center justify-center mt-2">
+                    <ScrollReveal direction="right">
+                        <div className="flex items-center justify-center mt-2">
 
-                        <div className="hover-3d">
-                            <figure className="w-auto rounded-2xl">
-                                <img src="\src\assets\img\img1.jpg" alt="Tailwind CSS 3D card" className="w-72" />
-                            </figure>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div className="hover-3d">
+                                <figure className="w-auto rounded-2xl">
+                                    <img src="\src\assets\img\img1.jpg" alt="Tailwind CSS 3D card" className="w-72" />
+                                </figure>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+
+
+
                         </div>
 
-
-
-                    </div>
-
+                    </ScrollReveal>
 
                 </div>
             </section>
@@ -162,41 +184,85 @@ export default function Home() {
 
             <div className="divider"></div>
 
-            {/* Skills section */}
-            <ScrollReveal>
-                <div className="w-full p-5 sm:flex-col items-center justify-center">
-                    <div className="flex w-full lg:mt-5 sm:mt-2 items-center justify-center h-32">
-                        <h1 className="text-5xl font-bold text-black">Skills & Tools</h1>
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 w-full place-items-center px-4">
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/django_logo.png" alt="django" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/express_logo.png" alt="express" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/nodejs_logo.png" alt="node" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/react_logo.png" alt="react" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/psql_logo.png" alt="postgresql" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/mongo_db_logo.png" alt="mongodb" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/msql_logo.png" alt="mssql" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/redis_log.png" alt="redis" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/docker_logo.png" alt="docker" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/nginx_logo.png" alt="nginx" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/firebase_logo.png" alt="firebase" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/postman_loog.png" alt="postman" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/github_logo_2.png" alt="github" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/numpy_logo.png" alt="numpy" />
-                        <img className="w-12 sm:w-14 md:w-16 h-auto object-contain" src="src/assets/logo/pandas_logo.png" alt="pandas" />
-                    </div>
-                </div >
-            </ScrollReveal>
+            {/* Skills & Tools Section */}
+            <section className="py-10 md:py-20 px-4 max-w-7xl mx-auto">
+
+                {/* MOBILE & TABLET VERSION (Visible on sm and md, hidden on lg+) */}
+                <div className="lg:hidden">
+                    <ScrollReveal duration={0.8} direction="up">
+                        <div className="w-full p-5 flex flex-col items-center justify-center bg-base-100 border border-base-300 rounded-3xl shadow-xl">
+                            <div className="flex w-full mt-2 items-center justify-center h-24">
+                                <h2 className="text-3xl font-black tracking-tighter">Skills & Tools</h2>
+                            </div>
+                            <div className="grid grid-cols-3 md:grid-cols-4 gap-6 w-full place-items-center px-4 pb-8">
+                                {skillsLogos.map((logo, index) => (
+                                    <div key={index} className="w-16 h-16 flex items-center justify-center rounded-xl bg-base-200 border border-base-300">
+                                        <img className="w-10 h-auto object-contain" src={logo.src} alt={logo.alt} />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </ScrollReveal>
+                </div>
+
+                {/* DESKTOP VERSION (Hidden on sm/md, visible on lg+) */}
+                <div className="hidden lg:block">
+                    <ScrollReveal duration={0.8} direction="left">
+                        <div className="bg-base-100 border border-base-300 rounded-3xl p-10 shadow-xl overflow-hidden">
+
+                            <div className="text-center mb-16">
+                                <h2 className="text-6xl font-black tracking-tighter">
+                                    Skills <span className="opacity-30">&</span> Tools
+                                </h2>
+                            </div>
+
+                            <div className="relative flex overflow-hidden">
+                                <div className="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-base-100 to-transparent z-10"></div>
+                                <div className="absolute inset-y-0 right-0 w-20 bg-linear-to-l from-base-100 to-transparent z-10"></div>
+
+                                <motion.div
+                                    className="flex flex-none gap-8 pr-8"
+                                    animate={{ x: ["0%", "-50%"] }}
+                                    transition={{
+                                        ease: "linear",
+                                        duration: 25,
+                                        repeat: Infinity,
+                                    }}
+                                >
+                                    {duplicatedLogos.map((logo, index) => (
+                                        <motion.div
+                                            key={index}
+                                            className="flex-none group relative"
+                                            whileHover={{ scale: 1.1, y: -5 }}
+                                        >
+                                            <div className="w-32 h-32 flex items-center justify-center rounded-2xl bg-base-200 border border-base-300 transition-colors group-hover:border-primary/30">
+                                                <img
+                                                    src={logo.src}
+                                                    alt={logo.alt}
+                                                    className="w-16 h-auto transition-all duration-300"
+                                                />
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </motion.div>
+                            </div>
+                        </div>
+                    </ScrollReveal>
+                </div>
+
+            </section>
+
 
             <div className="divider"></div>
             {/* projects */}
 
 
 
-            <ScrollReveal>
+            <ScrollReveal duration={0.8}>
                 <div className="w-full flex justify-center items-center">
                     <h1 className="text-2xl lg:text-5xl font-bold">Projects</h1>
                 </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 w-full place-items-center p-5">
                     {/* card-1 */}
                     <div className="hover-3d">
