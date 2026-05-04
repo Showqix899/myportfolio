@@ -3,70 +3,70 @@ import ScrollReveal from "../components/ScrollReveal"
 export default function Home() {
     return (
         <>
-            
+
             {/* Hero Section */}
-<section className="min-h-[80vh] flex items-center justify-center py-20 px-6">
-    <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <section className="min-h-[80vh] flex items-center justify-center py-20 px-6">
+                <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
-        {/* Introduction Section */}
-        <div className="flex flex-col space-y-6 text-center lg:text-left order-2 lg:order-1">
-            
-            <div className="space-y-2">
-                <ScrollReveal duration={0.8} direction="right">
-                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter">
-                        I’m Mahmud Showqi,
-                    </h1>
-                </ScrollReveal>
+                    {/* Introduction Section */}
+                    <div className="flex flex-col space-y-6 text-center lg:text-left order-2 lg:order-1">
 
-                <ScrollReveal duration={0.9} direction="left">
-                    <h2 className="text-2xl md:text-4xl font-light">
-                        A <span className=" font-medium italic">Full Stack Developer</span>
-                    </h2>
-                </ScrollReveal>
-            </div>
+                        <div className="space-y-2">
+                            <ScrollReveal duration={0.8} direction="right">
+                                <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter">
+                                    I’m Mahmud Showqi,
+                                </h1>
+                            </ScrollReveal>
 
-            <div className="max-w-lg">
-                <ScrollReveal duration={1} direction="right">
-                    <p className="text-sm md:text-base leading-relaxed font-mono uppercase tracking-widest">
-                        Who builds modern, high-performance web experiences from idea to deployment.
-                    </p>
-                </ScrollReveal>
-            </div>
+                            <ScrollReveal duration={0.9} direction="left">
+                                <h2 className="text-2xl md:text-4xl font-light">
+                                    A <span className=" font-medium italic">Full Stack Developer</span>
+                                </h2>
+                            </ScrollReveal>
+                        </div>
 
-            {/* Optional: Add a subtle CTA or separator line */}
-            <div className="pt-4">
-                <div className="h-px w-12  mx-auto lg:mx-0"></div>
-            </div>
-        </div>
+                        <div className="max-w-lg">
+                            <ScrollReveal duration={1} direction="right">
+                                <p className="text-sm md:text-base leading-relaxed font-mono uppercase tracking-widest">
+                                    Who builds modern, high-performance web experiences from idea to deployment.
+                                </p>
+                            </ScrollReveal>
+                        </div>
 
-        {/* Image Section */}
-        <div className="flex items-center justify-center mt-2">
-
-                    <div className="hover-3d">
-                        <figure className="w-auto rounded-2xl">
-                            <img src="\src\assets\img\img1.jpg"  alt="Tailwind CSS 3D card" className="w-72"/>
-                        </figure>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        {/* Optional: Add a subtle CTA or separator line */}
+                        <div className="pt-4">
+                            <div className="h-px w-12  mx-auto lg:mx-0"></div>
+                        </div>
                     </div>
 
-                   
+                    {/* Image Section */}
+                    <div className="flex items-center justify-center mt-2">
+
+                        <div className="hover-3d">
+                            <figure className="w-auto rounded-2xl">
+                                <img src="\src\assets\img\img1.jpg" alt="Tailwind CSS 3D card" className="w-72" />
+                            </figure>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+
+
+                    </div>
+
 
                 </div>
-        
-        
-    </div>
-</section>
+            </section>
             {/* about me section */}
             <div className="divider sm:mb-8"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 mt-5">
-                <div className="flex items-center justify-center h-52 lg:h-96 px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="flex items-center justify-center mb-4 mt-2 px-4">
                     <ScrollReveal duration={0.8} direction="left">
                         <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center">
                             About Me
@@ -111,7 +111,7 @@ export default function Home() {
                                 {/* Item 1: Degree */}
                                 <div className="relative pl-8 border-l border-neutral-800 group">
                                     {/* Minimalist "bullet" indicator */}
-                                    
+
 
                                     <h3 className="text-lg md:text-xl font-bold  tracking-tight">
                                         BSc in Computer Science and Engineering
@@ -124,7 +124,7 @@ export default function Home() {
                                 {/* Item 2: Certification */}
                                 <div className="relative pl-8 border-l border-neutral-800 group">
                                     {/* Minimalist "bullet" indicator */}
-                                    
+
                                     <h3 className="text-lg md:text-xl font-bold  tracking-tight">
                                         Python Django
                                     </h3>
