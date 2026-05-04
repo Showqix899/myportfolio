@@ -1,0 +1,55 @@
+@import "tailwindcss";
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* Hide scrollbar for Chrome, Safari and Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Prevent layout shift */
+body {
+  -ms-overflow-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* 1. Base transform state */
+.hover-3d-container figure {
+  --rx: 0deg;
+  --ry: 0deg;
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+}
+
+/* 2. Logic for each of the 9 grid sections */
+/* Rows: Top */
+.hover-trigger:nth-child(1):hover ~ figure { --rx: 15deg; --ry: -15deg; }
+.hover-trigger:nth-child(2):hover ~ figure { --rx: 15deg; --ry: 0deg; }
+.hover-trigger:nth-child(3):hover ~ figure { --rx: 15deg; --ry: 15deg; }
+
+/* Rows: Middle */
+.hover-trigger:nth-child(4):hover ~ figure { --rx: 0deg; --ry: -15deg; }
+.hover-trigger:nth-child(5):hover ~ figure { --rx: 0deg; --ry: 0deg; }
+.hover-trigger:nth-child(6):hover ~ figure { --rx: 0deg; --ry: 15deg; }
+
+/* Rows: Bottom */
+.hover-trigger:nth-child(7):hover ~ figure { --rx: -15deg; --ry: -15deg; }
+.hover-trigger:nth-child(8):hover ~ figure { --rx: -15deg; --ry: 0deg; }
+.hover-trigger:nth-child(9):hover ~ figure { --rx: -15deg; --ry: 15deg; }
+
+/* 3. Ensure triggers cover the area but stay invisible */
+.hover-trigger {
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+

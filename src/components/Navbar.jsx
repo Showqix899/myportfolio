@@ -1,0 +1,49 @@
+import { Link } from "react-router-dom"
+export default function Navbar() {
+    return (
+        <>
+            <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50" data-theme="acid">
+                {/* <div className="navbar-start">
+                    <div className="dropdown">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+                        </div>
+                        <ul
+                            tabIndex="-1"
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li><a>Homepage</a></li>
+                            <li><a>Portfolio</a></li>
+                            <li><a>About</a></li>
+                        </ul>
+                    </div>
+                </div> */}
+                <div className="navbar-start">
+                    <div className="avatar avatar-placeholder">
+                        <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
+                            <img src="src\assets\img\img1.jpg"/>
+                        </div>
+                    </div>
+                    <span className="pl-3"><Link to="/">MahmudShowqi</Link></span>
+                </div>
+                <div className="navbar-end">
+                    <div className="flex justify-between items-center full">
+                        <a href="https://github.com/Showqix899" className="btn btn-ghost  btn-circle">
+                            <img src="src\assets\logo\icons8-github-94.png" alt="github" />
+                        </a>
+                        <a href="https://x.com/ShowqiMahmud281" className="btn btn-ghost  btn-circle">
+                            <img src="src\assets\logo\icons8-x-94.png" alt="x" />
+                        </a>
+                        <a href="https://www.facebook.com/sami.hasan.31586526/" className="btn btn-ghost  btn-circle">
+                            <img src="src\assets\logo\icons8-facebook-94.png" alt="x" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/mahmod-showqi-4477a82b2/" className="btn btn-ghost btn-circle">
+                            <img src="src\assets\logo\icons8-linkedin-94.png" alt="linkedin" />
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </>
+    )
+}
+
