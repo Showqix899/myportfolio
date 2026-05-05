@@ -20,7 +20,7 @@ export default function Navbar() {
                 <div className="navbar-start">
                     <div className="avatar avatar-placeholder">
                         <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
-                            <img src="src\assets\img\img1.jpg"/>
+                            <img src="https://res.cloudinary.com/dll75buvd/image/upload/v1777984623/img1_gmzwb8.jpg"/>
                         </div>
                     </div>
                     <span className="pl-3"><Link to="/">MahmudShowqi</Link></span>
