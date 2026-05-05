@@ -71,7 +71,11 @@ export default function WatchLive() {
                 <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5 }}>
                     <a href="https://github.com/Showqix899/Live-watch-room" className="btn btn-xl btn-outline btn-info text-gray-500">GitHub-link</a>
                 </motion.div>
-                
+                <ScrollReveal direction="right" duration={0.5}>
+                    <div>
+                        <a href="https://web.postman.co/workspace/e7b23eb3-4e58-4de2-8dd3-2f4db20b2ac8/documentation/38955348-52fc2c80-913f-4eb6-819b-4dee3be60dc3" target="/" className="btn btn-xl btn-outline btn-warning text-gray-500">APIs</a>
+                    </div>
+                </ScrollReveal>
 
             </div>
 
