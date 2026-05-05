@@ -3,21 +3,21 @@ import { motion } from "framer-motion";
 import {Link} from "react-router-dom"
 
 const skillsLogos = [
-    { src: "src/assets/logo/django_logo.png", alt: "django" },
-    { src: "src/assets/logo/express_logo.png", alt: "express" },
-    { src: "src/assets/logo/nodejs_logo.png", alt: "node" },
-    { src: "src/assets/logo/react_logo.png", alt: "react" },
-    { src: "src/assets/logo/psql_logo.png", alt: "postgresql" },
-    { src: "src/assets/logo/mongo_db_logo.png", alt: "mongodb" },
-    { src: "src/assets/logo/msql_logo.png", alt: "mssql" },
-    { src: "src/assets/logo/redis_log.png", alt: "redis" },
-    { src: "src/assets/logo/docker_logo.png", alt: "docker" },
-    { src: "src/assets/logo/nginx_logo.png", alt: "nginx" },
-    { src: "src/assets/logo/firebase_logo.png", alt: "firebase" },
-    { src: "src/assets/logo/postman_loog.png", alt: "postman" },
-    { src: "src/assets/logo/github_logo_2.png", alt: "github" },
-    { src: "src/assets/logo/numpy_logo.png", alt: "numpy" },
-    { src: "src/assets/logo/pandas_logo.png", alt: "pandas" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984751/django_logo_mnmwn5.png", alt: "django" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984751/express_logo_wqqiju.png", alt: "express" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984752/nodejs_logo_alexho.png", alt: "node" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984753/react_logo_usgu7w.png", alt: "react" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984753/psql_logo_l5fntv.png", alt: "postgresql" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984752/mongo_db_logo_hkkcot.png", alt: "mongodb" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984752/msql_logo_z7pzje.png", alt: "mssql" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984753/redis_log_qaisdb.png", alt: "redis" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984751/docker_logo_oy3lto.png", alt: "docker" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984752/nginx_logo_ztpleb.png", alt: "nginx" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984751/firebase_logo_c39hdg.png", alt: "firebase" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984753/postman_loog_bgutkd.png", alt: "postman" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984751/github_logo_2_zrmf4s.png", alt: "github" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984752/numpy_logo_tlj2j0.png", alt: "numpy" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984752/pandas_logo_b72ovu.png", alt: "pandas" },
 ];
 
 export default function Home() {
@@ -66,7 +66,7 @@ export default function Home() {
 
                             <div className="hover-3d">
                                 <figure className="w-auto rounded-2xl">
-                                    <img src="\src\assets\img\img1.jpg" alt="Tailwind CSS 3D card" className="w-72" />
+                                    <img src="https://res.cloudinary.com/dll75buvd/image/upload/v1777984623/img1_gmzwb8.jpg" alt="Tailwind CSS 3D card" className="w-72" />
                                 </figure>
                                 <div></div>
                                 <div></div>
@@ -270,7 +270,7 @@ export default function Home() {
                         <div className="card bg-base-100 w-96 shadow-sm relative z-10">
                             <figure className="px-10 pt-10">
                                 <img
-                                    src="src/assets/img/zing-banner.png"
+                                    src="https://res.cloudinary.com/dll75buvd/image/upload/v1777984628/zing-banner_tjccp3.png"
                                     alt="zingfashion.com"
                                     className="rounded-xl"
                                 />
@@ -301,7 +301,7 @@ export default function Home() {
                         <div className="card bg-base-100 w-96 shadow-sm relative z-10">
                             <figure className="px-10 pt-10">
                                 <img
-                                    src="src\assets\img\watch-party-banner.jpg"
+                                    src="https://res.cloudinary.com/dll75buvd/image/upload/v1777984625/watch-party-banner_flc1dp.jpg"
                                     alt="zingfashion.com"
                                     className="rounded-xl"
                                 />

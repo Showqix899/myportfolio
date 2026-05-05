@@ -28,16 +28,16 @@ export default function Navbar() {
                 <div className="navbar-end">
                     <div className="flex justify-between items-center full">
                         <a href="https://github.com/Showqix899" className="btn btn-ghost  btn-circle">
-                            <img src="src\assets\logo\icons8-github-94.png" alt="github" />
+                            <img src="https://res.cloudinary.com/dll75buvd/image/upload/v1777984752/icons8-github-94_rtcrda.png" alt="github" />
                         </a>
                         <a href="https://x.com/ShowqiMahmud281" className="btn btn-ghost  btn-circle">
-                            <img src="src\assets\logo\icons8-x-94.png" alt="x" />
+                            <img src="https://res.cloudinary.com/dll75buvd/image/upload/v1777984752/icons8-x-94_fvxkrn.png" alt="x" />
                         </a>
                         <a href="https://www.facebook.com/sami.hasan.31586526/" className="btn btn-ghost  btn-circle">
-                            <img src="src\assets\logo\icons8-facebook-94.png" alt="x" />
+                            <img src="https://res.cloudinary.com/dll75buvd/image/upload/v1777984751/icons8-facebook-94_nh9jwm.png" alt="x" />
                         </a>
                         <a href="https://www.linkedin.com/in/mahmod-showqi-4477a82b2/" className="btn btn-ghost btn-circle">
-                            <img src="src\assets\logo\icons8-linkedin-94.png" alt="linkedin" />
+                            <img src="https://res.cloudinary.com/dll75buvd/image/upload/v1777984752/icons8-linkedin-94_e0vuom.png" alt="linkedin" />
                         </a>
                     </div>
 

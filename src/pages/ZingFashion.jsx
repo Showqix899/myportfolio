@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import ScrollReveal from "../components/ScrollReveal";
 
 const images = [
-    { src: "src/assets/img/zing-banner.png", alt: "img1" },
-    { src: "src/assets/img/zingfashion.com.png", alt: "img2" },
-    { src: "src/assets/img/zing2.png", alt: "img3" },
-    { src: "src/assets/img/zing3.png", alt: "img4" }
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984628/zing-banner_tjccp3.png", alt: "img1" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984628/zingfashion.com_gvy6yg.png", alt: "img2" },
+    { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984628/zing-banner_tjccp3.png", alt: "img3" },
+    {src:"https://res.cloudinary.com/dll75buvd/image/upload/v1777984625/zing-admin-2_caaedj.png",alt:"img4"},
+    {src:"https://res.cloudinary.com/dll75buvd/image/upload/v1777984625/zing-admin-1_zapcld.png",alt:"img5"},
+    {src:"https://res.cloudinary.com/dll75buvd/image/upload/v1777984625/zing3_ilwdis.png",alt:"img6"}
 ];
 
 export default function ZingFashion() {
