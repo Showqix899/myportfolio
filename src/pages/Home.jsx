@@ -361,7 +361,7 @@ export default function Home() {
                         <div className="order-1 lg:order-2 flex justify-center">
                             <div className="relative w-full max-w-100 aspect-square overflow-hidden rounded-lg bg-neutral-900 ring-1 ring-neutral-800 p-1">
                                 <img
-                                    src="src/assets/img/dev-socity.jpeg"
+                                    src="https://res.cloudinary.com/dll75buvd/image/upload/v1777984623/dev-socity_bdqudb.jpg"
                                     alt="IIUC Developer Society"
                                     className="w-full h-full object-cover  transition-all duration-700 ease-in-out"
                                 />
