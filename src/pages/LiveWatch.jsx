@@ -2,13 +2,15 @@ import { motion } from "framer-motion";
 import ScrollReveal from "../components/ScrollReveal";
 
 const images = [
-    { src: "src/assets/img/zing-banner.png", alt: "img1" },
-    { src: "src/assets/img/zingfashion.com.png", alt: "img2" },
-    { src: "src/assets/img/zing2.png", alt: "img3" },
-    { src: "src/assets/img/zing3.png", alt: "img4" }
+    { src: "src/assets/img/watch-party-banner.jpg", alt: "img1" },
+    { src: "src/assets/img/watch-party-1.png", alt: "img2" },
+    { src: "src/assets/img/watch-party-2.png", alt: "img3" },
+    { src: "src/assets/img/watch-party-3.png", alt: "img4" },
+    { src: "src/assets/img/watch-party-banner.png", alt: "img1" },
+    { src: "src/assets/img/watch-party-2.png", alt: "img3" },
 ];
 
-export default function ZingFashion() {
+export default function WatchLive() {
     // We double the array to ensure there's always content visible during the loop
     const infiniteImages = [...images, ...images, ...images, ...images, ...images];
 
@@ -56,24 +58,20 @@ export default function ZingFashion() {
                 <div className="flex w-full items-center justify-center">
                     <ScrollReveal direction="right" duration={0.8} delay={0.1} className="">
 
-                        <h1 className="lg:text-3xl sm:text-2xl font-bold italic text-center">ZingFashion E-com</h1>
+                        <h1 className="lg:text-3xl sm:text-2xl font-bold italic text-center">Live-Watch party</h1>
                     </ScrollReveal>
                 </div>
             </div>
             <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <ScrollReveal direction="left" duration={0.5}>
                     <div className="">
-                        <a href="https://zingfashion.com/" target="/" className="btn btn-xl btn-outline btn-success text-gray-500">llive-link</a>
+                        <a href="https://live-watch-room-6msc.vercel.app/" target="/" className="btn btn-xl btn-outline btn-success text-gray-500">llive-link</a>
                     </div>
                 </ScrollReveal>
                 <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5 }}>
-                    <a href="https://github.com/Showqix899/ecom_clothing_site" className="btn btn-xl btn-outline btn-info text-gray-500">GitHub-link</a>
+                    <a href="https://github.com/Showqix899/Live-watch-room" className="btn btn-xl btn-outline btn-info text-gray-500">GitHub-link</a>
                 </motion.div>
-                <ScrollReveal direction="right" duration={0.5}>
-                    <div>
-                        <a href="https://web.postman.co/workspace/e7b23eb3-4e58-4de2-8dd3-2f4db20b2ac8/documentation/38955348-52fc2c80-913f-4eb6-819b-4dee3be60dc3" target="/" className="btn btn-xl btn-outline btn-warning text-gray-500">APIs</a>
-                    </div>
-                </ScrollReveal>
+                
 
             </div>
 

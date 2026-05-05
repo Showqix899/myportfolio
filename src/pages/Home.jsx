@@ -1,5 +1,6 @@
 import ScrollReveal from "../components/ScrollReveal"
 import { motion } from "framer-motion";
+import {Link} from "react-router-dom"
 
 const skillsLogos = [
     { src: "src/assets/logo/django_logo.png", alt: "django" },
@@ -87,7 +88,7 @@ export default function Home() {
             </section>
             {/* about me section */}
             <div className="divider sm:mb-8"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className=" grid grid-cols-1 lg:grid-cols-2">
                 <div className="flex items-center justify-center mb-4 mt-2 px-4">
                     <ScrollReveal duration={0.8} direction="left">
                         <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center">
@@ -282,9 +283,9 @@ export default function Home() {
                                     <a className="btn btn-outline btn-success" href="https://zingfashion.com/" target="/">
                                         live-link
                                     </a>
-                                    <a className="btn btn-outline btn-primary" href="#">
+                                    <Link className="btn btn-outline btn-ghost btn-sm" to="/zing-fashion">
                                         More...
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -313,9 +314,9 @@ export default function Home() {
                                     <a className="btn btn-outline btn-success" href="https://live-watch-room-6msc.vercel.app/" target="/">
                                         live-link
                                     </a>
-                                    <a className="btn btn-outline btn-primary" href="#">
+                                    <Link to="/live-watch-party" className="btn btn-outline btn-primary">
                                         More...
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
