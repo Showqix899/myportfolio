@@ -13,7 +13,7 @@ function App() {
     <>
       <ScrollToTop/>
       <Navbar />
-      <div className="flex flex-col items-center justify-start min-h-screen w-auto overflow-x-hidden" data-theme="acid">
+      <div className="flex flex-col items-center justify-start min-h-screen w-auto overflow-x-hidden" data-theme="luxury">
         <Routes>
 
           <Route path="/" element={<Home />} />

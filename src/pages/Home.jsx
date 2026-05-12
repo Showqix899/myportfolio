@@ -1,6 +1,14 @@
 import ScrollReveal from "../components/ScrollReveal"
-import { motion } from "framer-motion";
-import {Link} from "react-router-dom"
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom"
+import { useState } from "react";
+
+import {
+    FaGithub,
+    FaLinkedin,
+    FaEnvelope,
+    FaPhone
+} from "react-icons/fa";
 
 const skillsLogos = [
     { src: "https://res.cloudinary.com/dll75buvd/image/upload/v1777984751/django_logo_mnmwn5.png", alt: "django" },
@@ -22,66 +30,105 @@ const skillsLogos = [
 
 export default function Home() {
     const duplicatedLogos = [...skillsLogos, ...skillsLogos, ...skillsLogos];
+    const [openContact, setOpenContact] = useState(false);
+
+    const scrollToSection = () => {
+        const section = document.getElementById("projects");
+        section.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    };
     return (
         <>
 
             {/* Hero Section */}
-            <section className="min-h-[80vh] flex items-center justify-center py-20 px-6">
-                <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <section className="relative min-h-screen flex items-center overflow-hidden px-6 py-20">
 
-                    {/* Introduction Section */}
-                    <div className="flex flex-col space-y-6 text-center lg:text-left order-2 lg:order-1">
+                {/* Background Glow */}
+                <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 blur-3xl rounded-full"></div>
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 blur-3xl rounded-full"></div>
 
-                        <div className="space-y-2">
-                            <ScrollReveal duration={0.8} direction="right">
-                                <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter">
+                <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center">
+
+                    {/* Left Content */}
+                    <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
+
+                        <div className="space-y-4">
+
+                            <ScrollReveal duration={0.8} direction="bottom">
+                                <div className="inline-flex items-center gap-2 border border-white/10 rounded-full px-4 py-2 text-xs uppercase tracking-[0.3em] font-mono backdrop-blur-sm">
+                                    Portfolio 2026
+                                </div>
+                            </ScrollReveal>
+
+                            <ScrollReveal duration={1} direction="right">
+                                <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black leading-none tracking-tight">
                                     I’m Mahmud Showqi,
                                 </h1>
                             </ScrollReveal>
 
-                            <ScrollReveal duration={0.9} direction="left">
+                            <ScrollReveal duration={1.1} direction="left">
                                 <h2 className="text-2xl md:text-4xl font-light">
-                                    A <span className=" font-medium italic">Full Stack Developer</span>
+                                    A{" "}
+                                    <span className="font-semibold italic">
+                                        Full Stack Developer
+                                    </span>
                                 </h2>
                             </ScrollReveal>
                         </div>
 
-                        <div className="max-w-lg">
-                            <ScrollReveal duration={1} direction="right">
-                                <p className="text-sm md:text-base leading-relaxed font-mono uppercase tracking-widest">
-                                    Who builds modern, high-performance web experiences from idea to deployment.
-                                </p>
-                            </ScrollReveal>
-                        </div>
+                        <ScrollReveal duration={1.2} direction="bottom">
+                            <p className="max-w-xl text-sm md:text-base leading-relaxed font-mono uppercase tracking-[0.25em] mx-auto lg:mx-0 text-white/70">
+                                Who builds modern, high-performance web experiences from idea to deployment.
+                            </p>
+                        </ScrollReveal>
 
-                        {/* Optional: Add a subtle CTA or separator line */}
-                        <div className="pt-4">
-                            <div className="h-px w-12  mx-auto lg:mx-0"></div>
-                        </div>
+                        {/* CTA Buttons */}
+                        <ScrollReveal duration={1.3} direction="bottom">
+                            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 pt-4">
+
+                                <button className="px-8 py-3 rounded-full bg-white text-black font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl" onClick={scrollToSection}>
+                                    View Projects
+                                </button>
+
+                                <button
+                                    onClick={() => setOpenContact(true)}
+                                    className="px-8 py-3 rounded-full border border-white/20 backdrop-blur-md transition-all duration-300 hover:bg-white/10"
+                                >
+                                    Contact Me
+                                </button>
+
+                            </div>
+                        </ScrollReveal>
+
                     </div>
 
-                    {/* Image Section */}
-                    <ScrollReveal direction="right">
-                        <div className="flex items-center justify-center mt-2">
+                    {/* Right Image */}
+                    <ScrollReveal duration={1.2} direction="bottom">
+                        <div className="relative flex justify-center lg:justify-end order-1 lg:order-2">
 
-                            <div className="hover-3d">
-                                <figure className="w-auto rounded-2xl">
-                                    <img src="https://res.cloudinary.com/dll75buvd/image/upload/v1777984623/img1_gmzwb8.jpg" alt="Tailwind CSS 3D card" className="w-72" />
-                                </figure>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
+                            {/* Soft Background Circle */}
+                            <div className="absolute w-[320px] h-[320px] md:w-[420px] md:h-[420px] rounded-full bg-white/5 blur-2xl"></div>
+
+                            {/* Image Card */}
+                            <div className="relative group">
+
+                                <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-tr from-white/20 to-transparent opacity-50 blur-xl group-hover:opacity-80 transition duration-500"></div>
+
+                                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 backdrop-blur-xl bg-white/5 p-3 shadow-2xl">
+
+                                    <img
+                                        src="https://res.cloudinary.com/dll75buvd/image/upload/v1778611521/img2_zo4wit.png"
+                                        alt="Mahmud Showqi"
+                                        className="w-[280px] sm:w-[340px] md:w-[420px] object-cover transition duration-700 group-hover:scale-[1.03] rounded-4xl"
+                                    />
+
+                                </div>
+
                             </div>
 
-
-
                         </div>
-
                     </ScrollReveal>
 
                 </div>
@@ -260,11 +307,11 @@ export default function Home() {
 
 
             <ScrollReveal duration={0.8}>
-                <div className="w-full flex justify-center items-center">
+                <div className="w-full flex justify-center items-center mt-5">
                     <h1 className="text-2xl lg:text-5xl font-bold">Projects</h1>
                 </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 w-full place-items-center p-5">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 w-full place-items-center p-5" id="projects">
                     {/* card-1 */}
                     <div className="hover-3d">
                         <div className="card bg-base-100 w-96 shadow-sm relative z-10">
@@ -372,6 +419,80 @@ export default function Home() {
 
                 </div>
             </section>
+
+
+            <AnimatePresence>
+                {openContact && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-4"
+                    >
+
+                        <motion.div
+                            initial={{ scale: 0.7, opacity: 0, y: 80 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.7, opacity: 0, y: 80 }}
+                            transition={{ duration: 0.3 }}
+                            className="relative w-full max-w-md rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl p-8 shadow-2xl"
+                        >
+
+                            <button
+                                onClick={() => setOpenContact(false)}
+                                className="absolute right-5 top-4 text-2xl hover:text-red-400 transition"
+                            >
+                                ×
+                            </button>
+
+                            <h1 className="text-3xl font-bold text-center mb-8">
+                                Contact Me
+                            </h1>
+
+                            <div className="flex flex-col gap-4">
+
+                                <a
+                                    href="https://github.com/Showqix899"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 hover:bg-white/10 transition-all duration-300 hover:scale-[1.02]"
+                                >
+                                    <FaGithub size={24} />
+                                    <span>GitHub</span>
+                                </a>
+
+                                <a
+                                    href="https://www.linkedin.com/in/mahmod-showqi-4477a82b2/"
+                                    target="/"
+                                    rel="noreferrer"
+                                    className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 hover:bg-white/10 transition-all duration-300 hover:scale-[1.02]"
+                                >
+                                    <FaLinkedin size={24} />
+                                    <span>LinkedIn</span>
+                                </a>
+
+                                <a
+                                    href="mailto:mshowqi12@gmail.com"
+                                    className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 hover:bg-white/10 transition-all duration-300 hover:scale-[1.02]"
+                                >
+                                    <FaEnvelope size={24} />
+                                    <span>mshowqi12@gmail.com</span>
+                                </a>
+
+                                <a
+                                    href="tel:+880123456789"
+                                    className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 hover:bg-white/10 transition-all duration-300 hover:scale-[1.02]"
+                                >
+                                    <FaPhone size={24} />
+                                    <span>+880 1307823878</span>
+                                </a>
+
+                            </div>
+
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
 
         </>
